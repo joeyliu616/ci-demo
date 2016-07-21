@@ -1,0 +1,49 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.0.xsd http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+
+    <changeSet id="1" author="joey">
+        <createTable tableName="t_version">
+            <column name="id" autoIncrement="true" type="int">
+                <constraints primaryKey="true" nullable="false" />
+            </column>
+
+            <column name="major" type="int">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="minor" type="int">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="revision" type="int">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="build" type="varchar(32)">
+                <constraints nullable="false"></constraints>
+            </column>
+
+            <column name="name" type="varchar(64)">
+                <constraints nullable="false"></constraints>
+            </column>
+
+            <column name="create_time" type="datetime" defaultValueDate="now()">
+                <constraints nullable="false"></constraints>
+            </column>
+            
+        </createTable>
+
+    </changeSet>
+
+    <changeSet id="2" author="joey" runAlways="true" context="ut or dev">
+        <loadData
+                file="db/data/version.csv"
+                tableName="t_version"/>
+    </changeSet>
+
+
+</databaseChangeLog>

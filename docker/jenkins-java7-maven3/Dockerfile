@@ -21,6 +21,7 @@ RUN curl -fsSL https://archive.apache.org/dist/maven/maven-3/$MAVEN_VERSION/bina
   && ln -s /usr/local/maven/bin/mvn /usr/bin/mvn
 ENV MAVEN_HOME /usr/local/maven
 ADD settings.xml /usr/local/maven/conf
+RUN mkdir -p /var/jenkins_home/.m2/setting.xml
 
 USER jenkins
 

@@ -30,7 +30,6 @@ public class VersionServiceImplTest extends AbstractTestNGSpringContextTests {
     @Resource
     VersionRepository versionRepository;
 
-
     ObjectMapper objectMapper = new ObjectMapper();
 
     @DataProvider
@@ -70,7 +69,6 @@ public class VersionServiceImplTest extends AbstractTestNGSpringContextTests {
         Version save = versionRepository.save(version);
         Assert.notNull(versionRepository.findOne(save.getId()));
     }
-
 
     @Test(dependsOnMethods =  "testSave")
     public void testFindLatest() throws JsonProcessingException {

@@ -1,4 +1,5 @@
-FROM jenkins
+# use older version
+FROM jenkins:1.651.3
 
 ENV MAVEN_VERSION 3.3.9
 

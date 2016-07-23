@@ -10,7 +10,7 @@ import java.util.List;
 /**
  * Created by joey on 16-7-20.
  */
-@Repository("versionRepository")
+@Repository
 public interface VersionRepository extends JpaRepository<Version,Long> {
 
     Version findTopByOrderByNameDesc();

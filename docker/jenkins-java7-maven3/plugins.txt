@@ -1,3 +1,2 @@
-email-ext:2.44
-emailext-template:1.0
-github:1.19.3
+token-macro:1.12.1
+config-file-provider:2.11

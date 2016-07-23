@@ -9,6 +9,6 @@ import org.springframework.context.annotation.PropertySource;
  */
 @Profile({"dev","ut"})
 @Configuration
-@PropertySource({"classpath:liquibase.properties"})
+@PropertySource({"classpath:h2DevConfig.properties"})
 public class H2DevConfig {
 }

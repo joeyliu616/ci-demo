@@ -1,6 +1,9 @@
 # use older version
 FROM jenkins:1.651.3
 
+ENV TZ "Asia/Shanghai" 
+
+
 #install net-tools jdk git
 USER root
 RUN apt-get clean && \
@@ -11,6 +14,7 @@ RUN rm -fr /var/lib/apt/lists/*
 EXPOSE 22
 ENV JAVA_HOME /usr/lib/jvm/java-7-openjdk-amd64
 USER jenkins
+
 
 #安装maven插件
 COPY plugins.txt /usr/share/jenkins/plugins.txt

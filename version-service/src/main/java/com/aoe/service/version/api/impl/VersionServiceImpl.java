@@ -1,14 +1,12 @@
-package com.aoe.service.version.impl;
+package com.aoe.service.version.api.impl;
 
 import com.aoe.service.version.api.VersionService;
 import com.aoe.service.version.api.dto.VersionInfo;
 import com.aoe.service.version.entity.Version;
 import com.aoe.service.version.jpa.VersionRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
-import java.util.Date;
 
 /**
  * Created by joey on 16-7-20.
@@ -28,7 +26,7 @@ public class VersionServiceImpl implements VersionService {
             versionInfo.setVersion(v1.getName());
             return versionInfo;
         }
-        return null;
+        return new VersionInfo();
     }
 
 }

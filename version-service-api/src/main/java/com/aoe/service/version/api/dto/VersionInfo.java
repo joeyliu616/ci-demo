@@ -2,12 +2,13 @@ package com.aoe.service.version.api.dto;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+import java.io.Serializable;
 import java.util.Date;
 
 /**
  * Created by joey on 16-7-20.
  */
-public class VersionInfo {
+public class VersionInfo implements Serializable {
 
     @JsonProperty
     public String version;

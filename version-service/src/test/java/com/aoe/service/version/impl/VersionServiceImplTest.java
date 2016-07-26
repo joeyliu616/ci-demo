@@ -1,13 +1,17 @@
 package com.aoe.service.version.impl;
 
-import com.aoe.service.version.VersionServiceDevConfigHook;
+import com.aoe.service.version.Launcher;
 import com.aoe.service.version.entity.Version;
 import com.aoe.service.version.jpa.VersionRepository;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.runner.RunWith;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.boot.test.SpringApplicationConfiguration;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.data.domain.Sort;
+import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.testng.AbstractTestNGSpringContextTests;
 import org.springframework.util.Assert;
@@ -24,9 +28,11 @@ import java.util.List;
  * Created by joey on 16-7-20.
  */
 @RunWith(SpringJUnit4ClassRunner.class)
-@SpringApplicationConfiguration(classes = VersionServiceDevConfigHook.class)
-public class VersionServiceImplTest extends AbstractTestNGSpringContextTests {
+@SpringApplicationConfiguration(classes=Launcher.class)
+public class VersionServiceImplTest extends AbstractTestNGSpringContextTests{
 
+    private static final Logger logger = LoggerFactory.getLogger(VersionServiceImplTest.class);
+    
     @Resource
     VersionRepository versionRepository;
 

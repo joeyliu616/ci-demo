@@ -1,8 +1,7 @@
 package com.aoe.api.rest.controller;
 
-import com.aoe.api.rest.Launcher;
+import com.aoe.api.rest.RestAPILauncher;
 import com.aoe.api.rest.config.DevConfigHook;
-import com.aoe.service.version.VersionServiceDevConfigHook;
 import com.aoe.service.version.api.dto.VersionInfo;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.Test;
@@ -23,7 +22,7 @@ import javax.annotation.Resource;
  * Created by joey on 16-7-20.
  */
 @RunWith(SpringJUnit4ClassRunner.class)
-@SpringApplicationConfiguration(classes = {Launcher.class,DevConfigHook.class,VersionServiceDevConfigHook.class})
+@SpringApplicationConfiguration(classes = {RestAPILauncher.class,UTConfig.class})
 @WebIntegrationTest({"server.port=0", "management.port=0"})
 public class WellcomeTest {
 

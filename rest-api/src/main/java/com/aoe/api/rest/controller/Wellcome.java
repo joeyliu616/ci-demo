@@ -16,12 +16,11 @@ import javax.annotation.Resource;
 @RestController
 public class Wellcome {
 
-    @Resource(name="versionService")
+    @Resource
     VersionService versionService;
 
     @RequestMapping("/api/version")
     public VersionInfo showVersion(){
-        Assert.notNull(versionService);
         return versionService.getLatestVersion();
     }
 }

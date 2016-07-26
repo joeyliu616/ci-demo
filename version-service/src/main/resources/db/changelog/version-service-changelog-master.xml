@@ -39,7 +39,7 @@
 
     </changeSet>
 
-    <changeSet id="2" author="joey" runAlways="true" context="ut or dev">
+    <changeSet id="2" author="joey" context="ut or dev" runInTransaction="true">
         <loadData
                 file="db/data/version.csv"
                 tableName="t_version"/>

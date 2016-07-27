@@ -13,7 +13,7 @@ import javax.annotation.PostConstruct;
  */
 @Profile({"dev","ut"})
 @Configuration
-@PropertySource({"classpath:version-h2.properties"})
+@PropertySource({"version-h2.properties"})
 public class H2Config {
     private static final Logger logger = LoggerFactory.getLogger(H2Config.class);
     @PostConstruct

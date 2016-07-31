@@ -1,0 +1,36 @@
+<!-- package for zip file -->
+<assembly>
+	<id>pkg</id>
+	<includeBaseDirectory>false</includeBaseDirectory>
+	<formats>
+		<format>tar.gz</format>
+	</formats>
+	<fileSets>
+		<fileSet>
+			<directory>${project.build.directory}/dubbo</directory>
+			<outputDirectory>/dubbo</outputDirectory>
+		</fileSet>
+		<fileSet>
+			<directory>${project.build.directory}/lib</directory>
+			<outputDirectory>/lib</outputDirectory>
+		</fileSet>
+		<fileSet>
+			<directory>${project.build.directory}/</directory>
+			<outputDirectory>/</outputDirectory>
+			<!-- make sure the config file you want to package -->
+			<includes>
+				<include>*.yml</include>
+				<include>*.xml</include>
+				<include>*.properties</include>
+			</includes>
+		</fileSet>
+		<fileSet>
+			<directory>${project.build.directory}/</directory>
+			<outputDirectory>/</outputDirectory>
+			<!-- make sure the config file you want to package -->
+			<includes>
+				<include>*.jar</include>
+			</includes>
+		</fileSet>
+	</fileSets>
+</assembly>

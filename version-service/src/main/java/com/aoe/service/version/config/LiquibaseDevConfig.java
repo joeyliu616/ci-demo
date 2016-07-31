@@ -8,6 +8,6 @@ import org.springframework.context.annotation.PropertySource;
  * Created by joey on 16-7-23.
  */
 @Configuration
-@PropertySource({"classpath:version-liquibase.properties"})
+@PropertySource({"version-liquibase.properties"})
 public class LiquibaseDevConfig {
 }

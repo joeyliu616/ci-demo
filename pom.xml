@@ -45,6 +45,7 @@
     <dependencies>
 
 <!--
+        与dubbo有兼容性问题
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-devtools</artifactId>

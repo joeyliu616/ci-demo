@@ -150,6 +150,9 @@
                 </configuration>
                 <executions>
                     <execution>
+                        <configuration>
+                            <tarLongFileMode>gnu</tarLongFileMode>
+                        </configuration>
                         <id>make-assembly</id>
                         <phase>package</phase>
                         <goals>

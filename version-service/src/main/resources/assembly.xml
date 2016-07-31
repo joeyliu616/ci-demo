@@ -8,19 +8,19 @@
 	<fileSets>
 		<fileSet>
 			<directory>${project.build.directory}/db</directory>
-			<outputDirectory>/db</outputDirectory>
+			<outputDirectory>${project.build.directory}/db</outputDirectory>
 		</fileSet>
 		<fileSet>
 			<directory>${project.build.directory}/dubbo</directory>
-			<outputDirectory>/dubbo</outputDirectory>
+			<outputDirectory>${project.build.directory}/dubbo</outputDirectory>
 		</fileSet>
 		<fileSet>
 			<directory>${project.build.directory}/lib</directory>
-			<outputDirectory>/lib</outputDirectory>
+			<outputDirectory>${project.build.directory}/lib</outputDirectory>
 		</fileSet>
 		<fileSet>
 			<directory>${project.build.directory}/</directory>
-			<outputDirectory>/</outputDirectory>
+			<outputDirectory>${project.build.directory}/</outputDirectory>
 			<!-- make sure the config file you want to package -->
 			<includes>
 				<include>*.yml</include>
@@ -30,7 +30,7 @@
 		</fileSet>
 		<fileSet>
 			<directory>${project.build.directory}/</directory>
-			<outputDirectory>/</outputDirectory>
+			<outputDirectory>${project.build.directory}/</outputDirectory>
 			<!-- make sure the config file you want to package -->
 			<includes>
 				<include>*.jar</include>

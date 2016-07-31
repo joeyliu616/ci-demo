@@ -21,8 +21,7 @@
 
     <modules>
         <module>rest-api</module>
-        <module>version-service</module>
-        <module>version-service-api</module>
+        <module>version</module>
     </modules>
 
     <distributionManagement>

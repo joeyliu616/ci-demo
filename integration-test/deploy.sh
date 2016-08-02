@@ -14,5 +14,5 @@ docker run  --name redis --net=overlay -e constraint:itype==misc -d joey.pc:5000
 sh $basepath/startService.sh version-service backend
 
 #start  rest-api
-sh $basepath/startService.sh rest-api frontend
+sh $basepath/startService.sh rest-api frontend -P
 echo "$(docker ps --filter label=rest-api)"

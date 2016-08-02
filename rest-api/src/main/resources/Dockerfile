@@ -5,7 +5,7 @@ RUN tar -xf /var/data/rest-api.tar.gz -C /var/data
 
 ENV spring.profiles.active=it
 
-EXPOSE 18899
+EXPOSE 18888
 
 WORKDIR /var/data
 

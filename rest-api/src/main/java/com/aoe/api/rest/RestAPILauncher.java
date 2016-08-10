@@ -7,7 +7,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * Created by joey on 16-7-20.
  */
 @SpringBootApplication
-public class RestAPILauncher {
+public class RestAPILauncher  {
+
     public static void main(String[] args) {
         SpringApplication.run(RestAPILauncher.class, args);
     }
